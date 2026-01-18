@@ -1,54 +1,62 @@
 # Automated-Climate-Control-System
 
-Introduction:
+## Introduction:
 
-A smart greenhouse system designed to automatically maintain optimal conditions for plant growth.
-Monitors temperature, humidity, soil moisture, and light intensity in real time.
-Automatically controls devices such as fans, water pumps, mist sprayers, and grow lights.
-Provides a cost-effective, modular, and scalable alterative to expensive commercial systems.
-Built using an ESP32 mircocontroller and a custom web-based dashboard.
-Supports both automatic operation and remote monitoring.
-Suitable for students, researchers, urban farmers, and small-to-medium greenhouse setups.
-Acts as a research platform and a foundation for smart agriculture and agritech applications.
+- A smart greenhouse system designed to automatically maintain optimal conditions for plant growth.
+- Monitors temperature, humidity, soil moisture, and light intensity in real time.
+- Automatically controls devices such as fans, water pumps, mist sprayers, and grow lights.
+- Provides a cost-effective, modular, and scalable alterative to expensive commercial systems.
+- Built using an ESP32 microcontroller and a custom web-based dashboard.
+- Supports both automatic operation and remote monitoring.
+- Suitable for students, researchers, urban farmers, and small-to-medium greenhouse setups.
+- Acts as a research platform and a foundation for smart agriculture and agritech applications.
 
-Research:
+## Research:
 
 
 Commercial & Enterprise Systems:
 
 These are established greenhouse monitoring solutions used in agriculture and commercial farming:
 
-Netafim IoT Irrigation & Climate Control
-Features: Real-time soil moisture monitoring, automated water scheduling, cloud analytics, smart irrigation optimization. 
-Monnit Remote Monitoring System
-Features: Wireless sensors for temperature, humidity, soil moisture with alerts, cloud dashboard for remote access. 
+### Netafim IoT Irrigation & Climate Control
+- Real-time soil moisture monitoring
+- Automated irrgigation scheduling
+- Cloud-based analytics and optimization
+  
+### Monnit Remote Monitoring System
+- Wireless temperature, humidity, and soil sensors
+- Alert system
+- Cloud dashboard for remote access
 
-IoX-Connect IoT Greenhouse Solutions
-Features: Sensors + automated irrigation, lighting, climate controls, scalable platform for small to large greenhouses. 
+### IoX-Connect IoT Greenhouse Solutions
+- Complete greenhouse climate automation
+- Enviromental sensing
+- Automated irrigation systems 
 
 Priva / Climate Corporation / Trimble greenhouse systems 
 features: Full greenhouse climate automation — environmental sensing, irrigation automation.
 
 
-Our edge over them:
+## Our edge over them:
 
-1.Cost-Effectiveness
-a. Commercial systems can be expensive. our ESP32 + open dashboard can be much cheaper.
-b. DIY products are low cost but often lack automation or scalable web interface.
+### 1.Cost-Effectiveness
+- Commercial systems are expensive.
+- ESP32-based solution with open dashboard significantly reduces cost.
+- DIY projects are cheap but often lack automation and scalability.
 
-2.Custom Web Dashboard
+### 2.Custom Web Dashboard
 Most hobby projects use platforms like Blynk or ThingsBoard, but building a custom website gives:
-a.	Full design control that is tailored to greenhouse needs
-b.	No dependency on third-party dashboards
-c.	Ability to add alerts, history graphs, multi-user access
+-	Full design control that is tailored to greenhouse needs
+- No dependency on third-party dashboards
+- Ability to add alerts, history graphs, multi-user access
 
 3.Modularity & Expandability
-a.	We can add Additional sensors (CO₂, pH, EC, etc.)
-b.	Actuators (fans, heaters, irrigation valves)
-c.	Predictive models (alerts based on trends)
+- Easy integration of additional sensors (CO2, pH, EC).
+- Supports multiple actuators (fans, heaters, irrigation valves).
+- Ready for future predictive and trend-based alerts.
 
 
-Business Model: Smart Greenhouse Automation:
+## Business Model: Smart Greenhouse Automation:
 
 1. Value Proposition
 1.	Affordability: High-end automation at a fraction of industrial costs.
@@ -74,7 +82,7 @@ Business Model: Smart Greenhouse Automation:
 2.	Cloud Infrastructure: MongoDB Atlas and Node.js hosting costs.
 
 
-Technical Implementation Details:
+## Technical Implementation Details:
 
 Technical Implementation Details
 The Smart Greenhouse Monitoring and Control System is designed to monitor environmental parameters and automatically control greenhouse devices using an ESP32 microcontroller.
@@ -123,11 +131,11 @@ Relay Module Specifications
 Operates on 5V
 Provides electrical isolation between ESP32 and high-power devices
 GPIO Connections
-Relay Channel	ESP32 GPIO	Controlled Device
-Relay 1	GPIO 13	Fan
-Relay 2	GPIO 24	Water Pump
-Relay 3	GPIO 14	Mister
-Relay 4	GPIO 27	Grow Light
+| Relay Channel	| ESP32 GPIO	| Controlled Device |
+| Relay 1	| GPIO 13 |	Fan |
+| Relay 2	| GPIO 24	| Water Pump |
+| Relay 3 |	GPIO 14	| Mister |
+| Relay 4	| GPIO 27	| Grow Light |
 
 
 
