@@ -1,5 +1,15 @@
 # Automated-Climate-Control-System
 
+Introduction:
+
+A smart greenhouse system designed to automatically maintain optimal conditions for plant growth.
+Monitors temperature, humidity, soil moisture, and light intensity in real time.
+Automatically controls devices such as fans, water pumps, mist sprayers, and grow lights.
+Provides a cost-effective, modular, and scalable alterative to expensive commercial systems.
+Built using an ESP32 mircocontroller and a custom web-based dashboard.
+Supports both automatic operation and remote monitoring.
+Suitable for students, researchers, urban farmers, and small-to-medium greenhouse setups.
+Acts as a research platform and a foundation for smart agriculture and agritech applications.
 
 Research:
 
