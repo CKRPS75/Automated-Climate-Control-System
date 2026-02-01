@@ -2,13 +2,13 @@
 
 ## Introduction:
 
-  - A smart Automated-Climate-System designed to automatically maintain optimal conditions for plant growth.
+  - A smart Automated-Climate-System designed to automatically maintain optimal conditions for agriculture and microbiological culture under controlled environment.
   - Monitors temperature, humidity, soil moisture, and light intensity in real time.
-  - Automatically controls devices such as fans, water pumps, mist sprayers, and grow lights.
+  - Automatically controls devices such as fans, water pumps, humidifier, and grow lights.
   - Provides a cost-effective, modular, and scalable alterative to expensive commercial systems.
   - Built using an ESP32 microcontroller and a custom web-based dashboard.
   - Supports both automatic operation and remote monitoring.
-  - Suitable for students, researchers, urban farmers, and small-to-medium Automated-Climate-Control-System setups.
+  - Suitable for research students, researchers, urban farmers, and small-to-medium Automated-Climate-Control-System setups.
   - Acts as a research platform and a foundation for smart agriculture and agritech applications.
 
 ## Research:
@@ -68,9 +68,10 @@ Most hobby projects use platforms like Blynk or ThingsBoard, but building a cust
 
 2. Revenue System:
    -	Hardware Sales: Buying all the hardware in bulk from the whole seller and make the whole setup in low cost.
-   -	Freemium Software:
-       -	 Basic (Free): Real-time monitoring and local automation.
-       -	 Pro (Subscription): Monthly fee for cloud storage of historical data, advanced analytics, and remote manual override.
+   -	Multiple Product Variants (Tiered Model):
+       - Basic Model- Our complete hardware system + Live Feed View on the Web App.
+    	 - Pro Model- Basic model + Manual Control + Higher Accuracy.
+       - Ultra Model- Standard model + option download past parameters in an excel sheet, .csv format file + Highest accuracy + future AI features.
    -	B2B Consultation: Custom Automated-Climate-Control-System setups for schools, nurseries, and boutique organic farms.
 
 3. Stakeholders:
@@ -86,13 +87,13 @@ Most hobby projects use platforms like Blynk or ThingsBoard, but building a cust
 
 ## Technical Implementation Details:
 
-The Automated-Climate-Control System is designed to monitor environmental parameters and automatically control connected devices using an ESP32 microcontroller. The system continuously senses temperature, humidity, soli moisture, and light intensity, and controls actuators such as fans, water pumps,mist sprayers, and grow lights through a relay module. All sensor data is Transmitted to a web-based dashboard for real-time and remote monitoring.
+The Automated-Climate-Control System is designed to monitor environmental parameters and automatically control connected devices using an ESP32 microcontroller. The system continuously senses temperature, humidity, soli moisture, and light intensity, and controls actuators such as fans, water pumps, humidifier, and grow lights through a relay module. All sensor data is Transmitted to our mongodb database which is then uploaded to our web-based dashboard for real-time and remote monitoring.
 
 1. Microcontroller Unit (ESP32)
 ESP32 acts as the central processing unit
 Features:
   - Dual-core processor
-  -  Built-in Wi-Fi
+  - Built-in Wi-Fi
   - Multiple GPIO & ADC pins
 •	Handles:
   - Sensor data acquisition
@@ -133,7 +134,7 @@ GPIO Connections
    | Relay Channel	| ESP32 GPIO	| Controlled Device |
    | Relay 1	| GPIO 13 |	Fan |
    | Relay 2	| GPIO 24	| Water Pump |
-   | Relay 3 |	GPIO 14	| Mister |
+   | Relay 3  |	GPIO 14	| Mister |
    | Relay 4	| GPIO 27	| Grow Light |
 
 
@@ -151,7 +152,9 @@ Relay switching is controlled through digital HIGH/LOW signals from ESP32 GPIO p
   - ESP32 powered via USB / Vin
  	- Sensors powered using 3.3V
   - Relay module powered using 5V
-  -	External loads (fan, pump, light) powered independently via relay contacts
+  -	DC fan and glow lights powered using 12 volts DC power supply
+  -	DC water pump powered using 9 volts battery
+  -	Humidifier powered via USB
 
 7. Firmware Implementation
   - Developed using Arduino IDE
@@ -162,7 +165,7 @@ Relay switching is controlled through digital HIGH/LOW signals from ESP32 GPIO p
       - Data reading & processing
       - Threshold comparison
       - Relay activation
-      - Wi-Fi communication (optional)
+      - Wi-Fi communication
 
 8. Control Algorithm 
   -	Read sensor values
@@ -171,4 +174,10 @@ Relay switching is controlled through digital HIGH/LOW signals from ESP32 GPIO p
   -	Send sensor data to the web server
   -	Repeat continuously
 
-
+Future Scope
+  - Camera to monitor and record the plant/bacteria growth.
+  - ML model to predict the most suitable climate conditions from past records for better results.
+  - Use AI to analyze which environmental "set-points" led to the fastest growth or the most stable bacterial cultures, allowing the system to suggest optimal parameters automatically.
+  - Use image processing to identify early signs of leaf yellowing, mold, or contamination in a lab setting, triggering an automatic alert or quarantine protocol.
+  - Make custom setups according to the customer’s special requirements. 
+  - Integrate CO_2 sensors for high-yield urban farming or pH/EC sensors for hydroponics and microbiology labs to provide a more complete environmental control suite.
